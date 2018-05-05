@@ -20,7 +20,7 @@ We would create few more variables from data to get more insightfull information
 
 #### It could be seen that lot of players have growing potential of 0, which making our data look a bit unclear. Lets consider more towards players who have growing potential more than 20.
 <p align="center"><img src="https://github.com/shabbir12hasan/the_best_of_EA_game_fifa_18/blob/master/graphs/player_growth_above20.png" width="850"/></p>
-It could be seen that there are quite a few players which could make really good team in fifa, as their potential growth is very high and they are cheap in value to buy. Moreover their age is very less.
+It could be seen that there are quite a few players which could make really good team in fifa, as their potential growth is very high.
 
 #### Now lets look at the players who have maximum growth rate
 Here are top players who will grow with the maximum potential,
