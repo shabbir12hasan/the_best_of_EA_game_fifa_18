@@ -4,14 +4,19 @@ This is a data visualziation project involving analysis of players in fifa 18.
 
 Data is extracted from kaggle competition, https://www.kaggle.com/thec03u5/fifa-18-demo-player-dataset/data.
 
+## Files includes:
 
-## Wrangling a bit!!
+    -   1.DataCleaning: data cleaning and wrangling is done.
+    -   2.Visualization: data exploration and visualization is done
+
+## 1.DataCleaning: Wrangling a bit!!
 We would create few more variables from data to get more insightfull information. 
  -  It could be seen from the data that lot of players have multiple preffered positions, selecting their first prefered position as prefered position
- -  With their total overall and potential we can calculate their scope of growth, this would state by howmuch overall they can grow.
+ -  Variables like Aggression, Stamina, Sprint.Speed and Strength have values as charaters, including + sign in middle. Probably showing extra growth of palyer. But we are only taking first two values and converting them into numerical values.
+ -  With their total overall and potential we can calculate their scope of growth, this would state by how much overall they can grow with.
 
 
-## Lets vizualize!!
+## 2.Visualization: Lets vizualize!!
 
 ### 1) Let's look into who would be the best aspect in fifa, considering players which have high growing potential.
 
