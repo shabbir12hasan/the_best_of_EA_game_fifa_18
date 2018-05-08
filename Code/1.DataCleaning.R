@@ -53,6 +53,13 @@ df$Stamina <- as.numeric(df$Stamina)
 
 # prefered position as first choice, taking only two values from start
 df$Preferred.Positions <- sapply(df$Preferred.Positions, take_strating_two_values)
+# Checking positions
+unique(df$Preferred.Positions)
+
+# CD and CA are 2 positions which appears beacuse we took 2 first characters, wehre as the positions are CDM and CAM.
+# repalcing positions with 
+df$Preferred.Positions[df$Preferred.Positions %in% 'CD'] <- 'CDM'
+df$Preferred.Positions[df$Preferred.Positions %in% 'CA'] <- "CAM"
 
 # creating column for growth that a player can achieve
 # this would be (potential - overall)
@@ -87,4 +94,4 @@ df <- df %>% mutate(Wage = str_replace(Wage, "K", "000"))
 df$Wage <- as.numeric(df$Wage)
 
 #Saving cleaned file
-write.csv(df, file = "fifa18_cleanData", row.names = FALSE)
+write.csv(df, file = "fifa18_cleanData",fileEncoding = 'UTF-8' ,row.names = FALSE)
