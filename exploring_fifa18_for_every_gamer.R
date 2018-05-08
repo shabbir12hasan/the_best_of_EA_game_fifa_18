@@ -4,6 +4,7 @@
 library(tidyr)
 library(ggplot2)
 library(data.table)
+library(tidyverse)
 
 ##########################
 ### importing data ###
@@ -63,8 +64,36 @@ df$Growth.scope <- df$Potential-df$Overall
 df <- subset(df, select = -c(13,15))
 
 
-#Cleaning Value
-#Cleaning Wage
+####Cleaning Value
+# Removing € sign
+df <- df %>% mutate(Value = str_replace(Value, "€", ""))
+
+# Creating a function which will take value which is in form of M and K, eg: 3.4M, 45K.
+# Multiplying M value with 1000000 and K value with 1000, returning value as int.
+valueCalculator <- function(val){
+  if (str_sub(val,-1) == 'K'){  #checking last element if its K
+    return(as.numeric(str_sub(val,1,-2))*1000)  #removing last element and multiplying
+  }
+  else if (str_sub(val,-1) == 'M'){  #checking last element if its M
+    return(as.numeric(str_sub(val,1,-2))*1000000)  #removing last element and multiplying
+  }
+  else {
+    return(as.numeric(val)) #if no K and M are found, returning value as it is. But in numeric.
+  }
+}
+# Applying created formula to Value column
+df$Value <- sapply(df$Value, valueCalculator)
+# stopping R to display exponential values
+options("scipen"=100, "digits"=4)
+
+####Cleaning Wage
+# Removing € sign
+df <- df %>% mutate(Wage = str_replace(Wage, "€", ""))
+df <- df %>% mutate(Wage = str_replace(Wage, "K", "000"))
+df$Wage <- as.numeric(df$Wage)
+
+head(df)
+df$Value
 
 ##########################
 ### Data Viz ###
