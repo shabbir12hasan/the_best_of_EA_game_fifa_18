@@ -13,8 +13,10 @@ ggplot(df, aes(x=Growth.scope)) + geom_bar()
 # players who have growing potential more than 20
 ggplot(df[df$Growth.scope>20,], aes(x=Growth.scope)) + geom_histogram(binwidth = .5)
 
+# It could be seen that there are few players who have good potential to grow 
 # checking which players in fifa18 have maximum capacity to grow
 View(df[df$Growth.scope==max(df$Growth.scope),])
+
 
 
 
