@@ -8,6 +8,7 @@ Data is extracted from kaggle competition, https://www.kaggle.com/thec03u5/fifa-
 
     -   1.DataCleaning: data cleaning and wrangling is done.
     -   2.Visualization: data exploration and visualization is done
+    -   3.TeamCreation: creating teams with different conditions.
 
 ## 1.DataCleaning: Wrangling a bit!!
 We would create few more variables from data to get more insightfull information. 
