@@ -24,7 +24,7 @@ We would create few more variables from data to get more insightfull information
 #### Creating a histogram for all players, counting their gowing potential.
 <p align="center"><img src="https://github.com/shabbir12hasan/the_best_of_EA_game_fifa_18/blob/master/graphs/player_growth.png" width="850"/></p>
 
-#### It could be seen that lot of players have growing potential of 0, which making our data look a bit unclear. Lets consider more towards players who have growing potential more than 20.
+#### It could be seen that lot of players have growing potential of 0, showing lot of people do not have any growth scope in the game. Lets consider more towards players who have growing potential of 20 or more.
 <p align="center"><img src="https://github.com/shabbir12hasan/the_best_of_EA_game_fifa_18/blob/master/graphs/player_growth_above20.png" width="850"/></p>
 It could be seen that there are quite a few players which could make really good team in fifa, as their potential growth is very high.
 
