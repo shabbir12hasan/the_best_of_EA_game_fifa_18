@@ -55,6 +55,7 @@ df$Stamina <- as.numeric(df$Stamina)
 df <- df %>% separate(Preferred.Positions, c("Preferred.Positions"), extra = "drop", remove=TRUE)
 # Checking positions
 unique(df$Preferred.Positions)
+df$Preferred.Positions <- as.factor(df$Preferred.Positions)
 
 ####Cleaning Value
 # Removing € sign
@@ -90,6 +91,27 @@ df$Wage <- as.numeric(df$Wage)
 # this would be (potential - overall)
 df$Growth.scope <- df$Potential-df$Overall
 
+################################################
+##########     Inspecting Data     ############
+################################################
+# Number of records
+dim(df)
+
+#summary of data
+summary(df)
+
+# It could be seen that few players dont have any clubs assigned to them, mostly they might be free agent or from some fringe club.
+# For now lets remove those players
+df = df[df$Club !='',]
+
+# Checking summary again
+summary(df)
+
+# It could be seen that few players have 0 Value.
+df[df$Value == 0,]
+
+# For now lets leave these players too, as they are very less.
+df = df[df$Value !=0,]
 
 #Saving cleaned file
 write.csv(df, file = "fifa18_cleanData",fileEncoding = 'UTF-8' ,row.names = FALSE)

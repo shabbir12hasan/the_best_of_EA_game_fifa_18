@@ -34,7 +34,9 @@ getPlayers = function(pos_plyr, num_plyr){
   
 }
 
-#picking team
+#picking best youth team which have highest growing potential
+# selecting formation 4-4-2
+
 team <- getPlayers('ST', 2)
 team <- rbind(team, getPlayers('LW', 1))
 team <- rbind(team, getPlayers('RW', 1))
@@ -43,3 +45,5 @@ team <- rbind(team, getPlayers('LB', 1))
 team <- rbind(team, getPlayers('RB', 1))
 team <- rbind(team, getPlayers('CB', 2))
 team <- rbind(team, getPlayers('GK', 1))
+
+team

@@ -43,13 +43,16 @@ head(teamOverall,10)
 tail(teamOverall,10)
 
 # Getting top 100 players
-topPlayers <- df[order(df$Overall, decreasing = TRUE),]
+topPlayers <- head(df[order(df$Overall, decreasing = TRUE),],100)
+
+#nationality
+ggplot(topPlayers, aes(topPlayers$Nationality)) + geom_bar()
+#reordering graph
+ggplot(topPlayers, aes(x=reorder(topPlayers$Nationality,topPlayers$Nationality,
+                 function(x)-length(x)))) + geom_bar() + xlab("Countries") +
+                    theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 
-
-
-
-
-
-
+#checking players with respect to strength. Splitting graphs according to preffered position
+ggplot(df, aes(df$Strength)) + geom_density() + facet_wrap(~df$Preferred.Positions)
 
