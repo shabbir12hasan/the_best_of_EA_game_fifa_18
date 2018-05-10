@@ -26,7 +26,7 @@ We would create few more variables from data to get more insightfull information
 ## 2.1.VisualizingPlayers 
 (FILE: https://github.com/shabbir12hasan/the_best_of_EA_game_fifa_18/blob/master/Code/2.1.VisualizingPlayers.R)
 
-### 2.1.1) Let's look into who would be the best aspect in fifa, considering players which have high growing potential.
+### 2.1.1 Let's look into who would be the best aspect in fifa, considering players which have high growing potential.
 
 #### Creating a histogram for all players, counting their gowing potential.
 <p align="center"><img src="https://github.com/shabbir12hasan/the_best_of_EA_game_fifa_18/blob/master/graphs/player_growth.png" width="850"/></p>
